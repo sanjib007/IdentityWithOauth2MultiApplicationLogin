@@ -1,0 +1,48 @@
+﻿{ 
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/connect/token",
+      "UpstreamHttpMethod": ["Post"],
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 5001
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "/Registration",
+      "UpstreamHttpMethod": ["Post"],
+      "DownstreamPathTemplate": "/Registration",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 5001
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "/test/{something}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "/test/{something}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 7001
+      }]
+    },
+    {
+      "UpstreamPathTemplate": "/seed/{something}",
+      "UpstreamHttpMethod": ["Get"],
+      "DownstreamPathTemplate": "/seed/{something}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [{
+        "Host": "localhost",
+        "Port": 5001
+      }]
+    }
+  ],
+  
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:4001"
+  }
+}
